@@ -48,6 +48,8 @@ def apply_coupons(cart,coupons)
   cart[item][:count] = cart[item][:count] - coupon[:num]
   
   if discounted_cart[item + " W/COUPON"]
+    discounted_cart[item + " W/COUPON"][:count] += 1
+      	 else
 
 def apply_clearance(cart)
   new_cart = cart
