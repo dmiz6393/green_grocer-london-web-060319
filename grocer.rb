@@ -50,6 +50,15 @@ def apply_coupons(cart,coupons)
   if discounted_cart[item + " W/COUPON"]
     discounted_cart[item + " W/COUPON"][:count] += 1
       	 else
+      	   
+      	   cart_with_coupon[item + " W/COUPON"] ={:price => coupon[:cost], :clearance => cart[item][:clearance], :count => 1}
+      	 end
+      end
+    end
+    cart_with_coupon[item] = data
+  end
+  cart_with_coupon
+end	end
 
 def apply_clearance(cart)
   new_cart = cart
