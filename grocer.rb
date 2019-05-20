@@ -41,7 +41,10 @@ end
 
 
 def apply_coupons(cart,coupons)
-  return cart if coupons==[]
+  discounted_cart={}
+  cart.each do |item,info|
+    coupons.each do |coupon|
+      if item== coupon[:item] && info
   new_cart=cart
   coupons.each do |coupon| 
     name= coupon[:item]
