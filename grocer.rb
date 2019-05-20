@@ -45,7 +45,9 @@ def apply_coupons(cart,coupons)
   cart.each do |item,info|
     coupons.each do |coupon|
       if item== coupon[:item] && info[:count] >= coupon [:num]
+  cart[item][:count] = cart[item][:count] - coupon[:num]
   
+  if 
 
 def apply_clearance(cart)
   new_cart = cart
